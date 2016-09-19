@@ -1,0 +1,36 @@
+<!--<div class="card s12 m4" *ngFor="let racket of rackets">
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator" [src]="racket.img">
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4">{{ racket.name }}</span>
+    <p>{{ racket.weight }}</p>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+  </div>
+</div>-->
+<!--<div class="row">
+  <div class="col s12 m4" *ngFor="let racket of rackets">
+    <div class="card">
+      <div class="card-image">
+        <img [src]="racket.img">
+        <span class="card-title red-text text-darken-3">{{racket.name}}</span>
+      </div>
+      <div class="card-content">
+        <p>Weight: {{racket.weight}}</p>
+        <p>Brand: {{racket.brand}}</p>
+      </div>
+      <div class="card-action">
+        <button class="btn"> Choose</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="row">
+  <racket-search></racket-search>
+  <racket-filter></racket-filter>
+  <racket-list></racket-list>
+</div>
