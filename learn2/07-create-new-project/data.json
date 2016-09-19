@@ -1,0 +1,42 @@
+var rackets = [
+    {
+        "name": "Head A",
+        "weight": 100
+    },
+    {
+        "name": "Wilson A",
+        "weight": 90
+    },
+    {
+        "name": "Prince A",
+        "weight": 110
+    },
+    {
+        "name": "Babolat A",
+        "weight": 95
+    },
+    {
+        "name": "Yonex A",
+        "weight": 85
+    },
+    {
+        "name": "Head B",
+        "weight": 105
+    },
+    {
+        "name": "Wilson B",
+        "weight": 95
+    },
+    {
+        "name": "Prince B",
+        "weight": 112
+    },
+    {
+        "name": "Babolat B",
+        "weight": 90
+    },
+    {
+        "name": "Yonex B",
+        "weight": 85
+    }
+];

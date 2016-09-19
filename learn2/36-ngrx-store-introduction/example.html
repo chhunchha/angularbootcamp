@@ -1,0 +1,4 @@
+<h5>Counter Example</h5>
+<button (click)="empty()">Empty Cart</button>
+<counter-display label="Berries" [counter]="berry$ | async" (pick)="pickBerry()"></counter-display>
+<counter-display label="Apples" [counter]="apple$ | async" (pick)="pickApple()"></counter-display>
