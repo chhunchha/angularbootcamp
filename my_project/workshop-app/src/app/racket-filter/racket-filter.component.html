@@ -1,7 +1,7 @@
 <div class="row">
-  <div class="input-field col s12 m6">
+  <div class="input-field col s12 m5">
     <!--<label>Brand Select</label>-->
-    <select class="browser-default">>
+    <select class="browser-default" [(ngModel)]="filters.brand">
       <option value="" disabled selected>Choose your brand</option>
       <option *ngFor="let brand of brands" value="brand">{{brand}}</option>
       <!--<option value="Wilson">Wilson</option>
@@ -11,9 +11,9 @@
     </select>
     
   </div>
-  <div class="input-field col s12 m6">
+  <div class="input-field col s12 m5">
     <!--<label>Max Weight</label>-->
-    <select class="browser-default">>
+    <select class="browser-default" [(ngModel)]="filters.weight">
       <option value="" disabled selected>select max weight</option>
       <option *ngFor="let weight of weights" value="weight">{{weight}}</option>
 
@@ -24,5 +24,8 @@
       <option value="105">110</option>-->
     </select>
     
+  </div>
+  <div class="input-field col s12 m2">
+    <button class="btn" (click)="filterChanged()">Filter</button>
   </div>
 </div>

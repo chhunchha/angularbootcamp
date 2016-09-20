@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./selected-racket.component.css']
 })
 export class SelectedRacketComponent implements OnInit {
-  @Input('selectedRacket') racket;
+  @Input('selectedRackets') rackets;
   constructor() { }
 
   ngOnInit() {

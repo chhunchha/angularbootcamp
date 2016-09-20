@@ -32,12 +32,12 @@
 </div>-->
 
 <div class="row">
-  <racket-search></racket-search>
-  <racket-filter [racketBrands]="unique_brands" [racketWeights]="unique_weights"></racket-filter>
+  <racket-search (searchEvent)="searchChanged($event)"></racket-search>
+  <racket-filter [racketBrands]="unique_brands" [racketWeights]="unique_weights" (filterEvent)="filterChanged($event)"></racket-filter>
   <racket-list [rackets]="rackets" (selectedRacket)="setSelectedRacket($event)"></racket-list>
 </div>
 
-<div class="row" *ngIf="selectedRacket">
-  <h4>Selected Racket</h4>
-  <selected-racket [selectedRacket]="selectedRacket"></selected-racket>
+<div class="row">
+  <h5 style="padding-left: 10px">Selected Rackets</h5>
+  <selected-racket [selectedRackets]="selectedRackets"></selected-racket>
 </div>

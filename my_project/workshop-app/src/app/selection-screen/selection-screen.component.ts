@@ -82,8 +82,10 @@ export class SelectionScreenComponent implements OnInit {
   rackets = rackets.data;
   unique_brands = _.sortBy(_.uniq(_.map(rackets.data, 'brand')));
   unique_weights = _.sortBy(_.uniq(_.map(rackets.data, 'weight')));
-  selectedRacket: Racket;
-  
+  selectedRackets: Racket[] = [];
+  search: string;
+  filters = {};
+
   constructor() { }
 
   ngOnInit() {
@@ -91,6 +93,17 @@ export class SelectionScreenComponent implements OnInit {
 
   setSelectedRacket(racket: Racket) {
     console.log("Got in selection-screen", racket);
-    this.selectedRacket = racket;
+    this.selectedRackets.push(racket);
+    console.log(this.selectedRackets);
+  }
+
+  searchChanged(search: string) {
+    console.log('got search string', search);
+    this.search = search;
+  }
+
+  filterChanged(filters) {
+    console.log('filters' , filters);
+    this.filters = filters;
   }
 }

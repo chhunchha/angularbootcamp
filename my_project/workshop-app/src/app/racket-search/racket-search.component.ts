@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'racket-search',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./racket-search.component.css']
 })
 export class RacketSearchComponent implements OnInit {
+  @Output() searchEvent = new EventEmitter<string>();
 
+  search = { text: "" };
   constructor() { }
 
   ngOnInit() {
+  }
+
+  searchChanged() {
+    this.searchEvent.emit(this.search.text);
   }
 
 }

@@ -1,7 +1,7 @@
 <div class="row">
   <form class="col s12">
       <div class="input-field col s12">
-        <input id="search" type="text" class="validate">
+        <input id="search" type="text" class="validate" [(ngModel)]="search.text" name="searchText" (keyup)="searchChanged()">
         <label for="search">Search</label>
       </div>
   </form>

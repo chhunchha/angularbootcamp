@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'racket-filter',
@@ -8,9 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RacketFilterComponent implements OnInit {
   @Input('racketBrands') brands: string[];
   @Input('racketWeights') weights: number[];
+
+  @Output() filterEvent = new EventEmitter();
   constructor() { }
 
+  filters = {}
+
   ngOnInit() {
+  }
+
+  filterChanged() {
+    this.filterEvent.emit(this.filters);
   }
 
 }
