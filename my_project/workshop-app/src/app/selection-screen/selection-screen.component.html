@@ -11,7 +11,9 @@
     <p>Here is some more information about this product that is only revealed once clicked on.</p>
   </div>
 </div>-->
-<!--<div class="row">
+  <!--<racket-search></racket-search>
+  <racket-filter></racket-filter>
+<div class="row">
   <div class="col s12 m4" *ngFor="let racket of rackets">
     <div class="card">
       <div class="card-image">
@@ -31,6 +33,11 @@
 
 <div class="row">
   <racket-search></racket-search>
-  <racket-filter></racket-filter>
-  <racket-list></racket-list>
+  <racket-filter [racketBrands]="unique_brands" [racketWeights]="unique_weights"></racket-filter>
+  <racket-list [rackets]="rackets" (selectedRacket)="setSelectedRacket($event)"></racket-list>
+</div>
+
+<div class="row" *ngIf="selectedRacket">
+  <p><h3>Selected Racket</h3></p>
+  <selected-racket [selectedRacket]="selectedRacket"></selected-racket>
 </div>

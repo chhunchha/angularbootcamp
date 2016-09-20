@@ -38,3 +38,7 @@
   </div>
 
 </div>
+
+<button class="btn"  [ngClass]=" toggle_flag ? 'down' : 'up' " (click)="toggle()">Toggle 1</button>
+<button class="btn"  [ngClass]=" toggle_flag ? 'up' : 'down' " (click)="toggle()">Toggle 2</button>
+<p [hidden]="toggle_flag"> Show/hide</p>

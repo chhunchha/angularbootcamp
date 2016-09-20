@@ -3,10 +3,11 @@
     <!--<label>Brand Select</label>-->
     <select class="browser-default">>
       <option value="" disabled selected>Choose your brand</option>
-      <option value="Wilson">Wilson</option>
+      <option *ngFor="let brand of brands" value="brand">{{brand}}</option>
+      <!--<option value="Wilson">Wilson</option>
       <option value="Head">Head</option>
       <option value="Prince">Prince</option>
-      <option value="Babolat">Babolat</option>
+      <option value="Babolat">Babolat</option>-->
     </select>
     
   </div>
@@ -14,11 +15,13 @@
     <!--<label>Max Weight</label>-->
     <select class="browser-default">>
       <option value="" disabled selected>select max weight</option>
-      <option value="90">90</option>
+      <option *ngFor="let weight of weights" value="weight">{{weight}}</option>
+
+      <!--<option value="90">90</option>
       <option value="95">95</option>
       <option value="100">100</option>
       <option value="105">105</option>
-      <option value="105">110</option>
+      <option value="105">110</option>-->
     </select>
     
   </div>

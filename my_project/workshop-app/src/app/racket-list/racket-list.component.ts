@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Racket } from './../data.ts';
 
 @Component({
   selector: 'racket-list',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./racket-list.component.css']
 })
 export class RacketListComponent implements OnInit {
-
-  constructor() { }
+  @Input() rackets: Racket[];
+  @Output() selectedRacket = new EventEmitter<Racket>();
+  
+  constructor() { 
+  }
 
   ngOnInit() {
   }
 
+  setSelectedRacket(racket: Racket){
+    console.log("emit" , racket);
+    this.selectedRacket.emit(racket);
+  }
 }

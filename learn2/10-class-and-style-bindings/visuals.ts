@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class VisualsComponent {
   n: number = 1;
-
+  toggle_flag: boolean = false;
   increment() {
     this.n++;
   }
@@ -16,5 +16,9 @@ export class VisualsComponent {
     if (x > 7) {
       return 'extra-class';
     }
+  }
+
+  toggle() {
+    this.toggle_flag = !this.toggle_flag;
   }
 }

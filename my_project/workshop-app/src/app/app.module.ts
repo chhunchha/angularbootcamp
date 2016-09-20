@@ -11,6 +11,7 @@ import { RacketListComponent } from './racket-list/racket-list.component';
 import { RacketCardComponent } from './racket-card/racket-card.component';
 import { RacketSearchComponent } from './racket-search/racket-search.component';
 import { RacketFilterComponent } from './racket-filter/racket-filter.component';
+import { SelectedRacketComponent } from './selected-racket/selected-racket.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     RacketListComponent,
     RacketCardComponent,
     RacketSearchComponent,
-    RacketFilterComponent
+    RacketFilterComponent,
+    SelectedRacketComponent
   ],
   imports: [
     BrowserModule,
