@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -12,11 +12,14 @@ import { RacketCardComponent } from './racket-card/racket-card.component';
 import { RacketSearchComponent } from './racket-search/racket-search.component';
 import { RacketFilterComponent } from './racket-filter/racket-filter.component';
 import { SelectedRacketComponent } from './selected-racket/selected-racket.component';
+import { PlayerProfileComponent } from './player-profile/player-profile.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeScreenComponent },
-  { path: 'selection', component: SelectionScreenComponent}
+  { path: 'selection', component: SelectionScreenComponent},
+  { path: 'profile', component: PlayerProfileComponent}
+
 ];
 
 @NgModule({
@@ -28,10 +31,12 @@ const appRoutes: Routes = [
     RacketCardComponent,
     RacketSearchComponent,
     RacketFilterComponent,
-    SelectedRacketComponent
+    SelectedRacketComponent,
+    PlayerProfileComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes, { useHash: true })

@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="card col s12">
+    <div class="card-content">
+      <div class="card-title">Player profile</div>
+        <form [formGroup]="profileFormGroup" (ngSubmit)="saveProfile()">
+          <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="name" type="text" formControlName="name" placeholder="Name">
+                <!--<label for="name">Name</label>-->
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" formControlName="email" placeholder="Email">
+                <!--<label for="email">Email</label>-->
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="phone" type="text" formControlName="phone" placeholder="999-999-9999">
+                <!--<label for="phone">Phone</label>-->
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">person_pin</i>
+                <input id="birthdate" type="date" class="datepicker" formControlName="birthdate" placeholder="Birth Date">
+                <!--<label for="birthdate">Birth Date</label>-->
+              </div>
+          </div>
+          <div class="row right-align"> 
+            <button type="reset" class="btn" > Reset </button>
+            <button class="btn" [disabled]="!profileFormGroup.valid" [class.disabled]="!profileFormGroup.valid"> Save </button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card col s12">
+    <div class="card-content">
+      <div class="card-title">Profile</div>
+      <pre>{{profileFormGroup.value | json}}</pre>
+    </div>
+  </div>
+</div>
