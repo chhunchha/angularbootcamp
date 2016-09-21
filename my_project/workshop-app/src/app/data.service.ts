@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class DataService {
@@ -17,63 +18,63 @@ export class DataService {
     babolat : "http://i.ebayimg.com/00/s/ODAwWDgwMA==/z/2aYAAOxyRNJSgnl8/$_1.JPG?set_id=2"
   }
 
-  rackets = {
-    data: [
-      {
-      "name": "Head A",
-      "weight": 100,
-      "img": this.racket_images.head,
-      "brand": this.racket_brands.head
-      },
-      {
-        "name": "Wilson A",
-        "weight": 90,
-        "img": this.racket_images.wilson,
-        "brand": this.racket_brands.wilson
-      },
-      {
-        "name": "Prince A",
-        "weight": 110,
-        "img": this.racket_images.prince,
-        "brand": this.racket_brands.prince
-      },
-      {
-        "name": "Babolat A",
-        "weight": 95,
-        "img": this.racket_images.babolat,
-        "brand": this.racket_brands.babolat
-      },
-      {
-        "name": "Head B",
-        "weight": 105,
-        "img": this.racket_images.head,
-        "brand": this.racket_brands.head
-      },
-      {
-        "name": "Wilson B",
-        "weight": 95,
-        "img": this.racket_images.wilson,
-        "brand": this.racket_brands.wilson
-      },
-      {
-        "name": "Prince B",
-        "weight": 112,
-         "img": this.racket_images.prince,
-         "brand": this.racket_brands.prince
-      },
-      {
-        "name": "Babolat B",
-        "weight": 90,
-        "img": this.racket_images.babolat,
-        "brand": this.racket_brands.babolat
-      }
-    ]
-  };
+  // rackets = {
+  //   data: [
+  //     {
+  //     "name": "Head A",
+  //     "weight": 100,
+  //     "img": this.racket_images.head,
+  //     "brand": this.racket_brands.head
+  //     },
+  //     {
+  //       "name": "Wilson A",
+  //       "weight": 90,
+  //       "img": this.racket_images.wilson,
+  //       "brand": this.racket_brands.wilson
+  //     },
+  //     {
+  //       "name": "Prince A",
+  //       "weight": 110,
+  //       "img": this.racket_images.prince,
+  //       "brand": this.racket_brands.prince
+  //     },
+  //     {
+  //       "name": "Babolat A",
+  //       "weight": 95,
+  //       "img": this.racket_images.babolat,
+  //       "brand": this.racket_brands.babolat
+  //     },
+  //     {
+  //       "name": "Head B",
+  //       "weight": 105,
+  //       "img": this.racket_images.head,
+  //       "brand": this.racket_brands.head
+  //     },
+  //     {
+  //       "name": "Wilson B",
+  //       "weight": 95,
+  //       "img": this.racket_images.wilson,
+  //       "brand": this.racket_brands.wilson
+  //     },
+  //     {
+  //       "name": "Prince B",
+  //       "weight": 112,
+  //        "img": this.racket_images.prince,
+  //        "brand": this.racket_brands.prince
+  //     },
+  //     {
+  //       "name": "Babolat B",
+  //       "weight": 90,
+  //       "img": this.racket_images.babolat,
+  //       "brand": this.racket_brands.babolat
+  //     }
+  //   ]
+  // };
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   getRackets() {
-    return this.rackets.data;
+    return this.http.get('./assets/rackets.json');
   }
 
   getRacketImages() {

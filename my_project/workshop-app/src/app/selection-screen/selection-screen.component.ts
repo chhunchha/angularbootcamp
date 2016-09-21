@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { racket_images, Racket } from './../data.ts';
 import { DataService } from './../data.service.ts';
+import { Response } from '@angular/http';
+
 import * as _ from 'lodash';
 
 @Component({
@@ -20,9 +22,13 @@ export class SelectionScreenComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.rackets = this.dataService.getRackets();
-    this.unique_brands = _.sortBy(_.uniq(_.map(this.rackets, 'brand')));
-    this.unique_weights = _.sortBy(_.uniq(_.map(this.rackets, 'weight')));
+    const racketsObs = this.dataService.getRackets();
+    racketsObs.subscribe((res: Response) => {
+      console.log(res);
+      this.rackets = res.json();
+      this.unique_brands = _.sortBy(_.uniq(_.map(this.rackets, 'brand')));
+      this.unique_weights = _.sortBy(_.uniq(_.map(this.rackets, 'weight')));
+    });
   }
 
   setSelectedRacket(racket: Racket) {
