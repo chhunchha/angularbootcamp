@@ -18,17 +18,19 @@ export class SelectionScreenComponent implements OnInit {
   selectedRackets: Racket[] = [];
   search: string;
   filters = {};
-
+  racketsObs;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    const racketsObs = this.dataService.getRackets();
-    racketsObs.subscribe((res: Response) => {
+    this.racketsObs = this.dataService.getRackets();
+    this.racketsObs.subscribe((res: Response) => {
       console.log(res);
       this.rackets = res.json();
       this.unique_brands = _.sortBy(_.uniq(_.map(this.rackets, 'brand')));
       this.unique_weights = _.sortBy(_.uniq(_.map(this.rackets, 'weight')));
     });
+
+    // this.rackets = this.dataService.getRackets();
   }
 
   setSelectedRacket(racket: Racket) {
@@ -45,5 +47,9 @@ export class SelectionScreenComponent implements OnInit {
   filterChanged(filters) {
     console.log('filters' , filters);
     this.filters = filters;
+  }
+
+  ngOnDistroy() {
+    this.racketsObs.unsubscribe();
   }
 }

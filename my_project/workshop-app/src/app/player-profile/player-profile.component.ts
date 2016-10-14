@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   providers: [FormBuilder]
 
 })
+
 export class PlayerProfileComponent implements OnInit {
 
   profileFormGroup: FormGroup;

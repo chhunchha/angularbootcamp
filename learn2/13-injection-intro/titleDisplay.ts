@@ -5,6 +5,8 @@ import { Title } from '@angular/platform-browser';
   selector: 'my-app',
   templateUrl: './titleDisplay.html',
   providers: [Title]
+
+  //removing providers also works here.
 })
 export class TitleComponent {
   pageTitle: string;

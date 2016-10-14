@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {
@@ -74,7 +75,9 @@ export class DataService {
   constructor(private http: Http) { }
 
   getRackets() {
+    // return Observable.of(this.http.get('./assets/rackets.json'));
     return this.http.get('./assets/rackets.json');
+
   }
 
   getRacketImages() {

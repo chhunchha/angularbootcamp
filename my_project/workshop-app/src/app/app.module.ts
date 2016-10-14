@@ -13,13 +13,14 @@ import { RacketSearchComponent } from './racket-search/racket-search.component';
 import { RacketFilterComponent } from './racket-filter/racket-filter.component';
 import { SelectedRacketComponent } from './selected-racket/selected-racket.component';
 import { PlayerProfileComponent } from './player-profile/player-profile.component';
+import { RacketComponent } from './racket/racket.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeScreenComponent },
   { path: 'selection', component: SelectionScreenComponent},
-  { path: 'profile', component: PlayerProfileComponent}
-
+  { path: 'profile', component: PlayerProfileComponent},
+  { path: 'racket/:racket', component: RacketComponent}
 ];
 
 @NgModule({
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     RacketSearchComponent,
     RacketFilterComponent,
     SelectedRacketComponent,
-    PlayerProfileComponent
+    PlayerProfileComponent,
+    RacketComponent
   ],
   imports: [
     BrowserModule,

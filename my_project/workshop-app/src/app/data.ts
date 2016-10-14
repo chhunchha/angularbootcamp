@@ -24,55 +24,55 @@ export const racket_brands = {
   wilson: 'Wilson'
 }
 
-export const rackets = {
-    data: [
-      {
-      "name": "Head A",
-      "weight": 100,
-      "img": racket_images.head,
-      "brand": racket_brands.head
-      },
-      {
-        "name": "Wilson A",
-        "weight": 90,
-        "img": racket_images.wilson,
-        "brand": racket_brands.wilson
-      },
-      {
-        "name": "Prince A",
-        "weight": 110,
-        "img": racket_images.prince,
-        "brand": racket_brands.prince
-      },
-      {
-        "name": "Babolat A",
-        "weight": 95,
-        "img": racket_images.babolat,
-        "brand": racket_brands.babolat
-      },
-      {
-        "name": "Head B",
-        "weight": 105,
-        "img": racket_images.head,
-        "brand": racket_brands.head
-      },
-      {
-        "name": "Wilson B",
-        "weight": 95,
-        "img": racket_images.wilson,
-        "brand": racket_brands.wilson
-      },
-      {
-        "name": "Prince B",
-        "weight": 112,
-         "img": racket_images.prince,
-         "brand": racket_brands.prince
-      },
-      {
-        "name": "Babolat B",
-        "weight": 90,
-        "img": racket_images.babolat,
-        "brand": racket_brands.babolat
-      }
-    ]
-};
+// export const rackets = {
+//     data: [
+//       {
+//       "name": "Head A",
+//       "weight": 100,
+//       "img": racket_images.head,
+//       "brand": racket_brands.head
+//       },
+//       {
+//         "name": "Wilson A",
+//         "weight": 90,
+//         "img": racket_images.wilson,
+//         "brand": racket_brands.wilson
+//       },
+//       {
+//         "name": "Prince A",
+//         "weight": 110,
+//         "img": racket_images.prince,
+//         "brand": racket_brands.prince
+//       },
+//       {
+//         "name": "Babolat A",
+//         "weight": 95,
+//         "img": racket_images.babolat,
+//         "brand": racket_brands.babolat
+//       },
+//       {
+//         "name": "Head B",
+//         "weight": 105,
+//         "img": racket_images.head,
+//         "brand": racket_brands.head
+//       },
+//       {
+//         "name": "Wilson B",
+//         "weight": 95,
+//         "img": racket_images.wilson,
+//         "brand": racket_brands.wilson
+//       },
+//       {
+//         "name": "Prince B",
+//         "weight": 112,
+//          "img": racket_images.prince,
+//          "brand": racket_brands.prince
+//       },
+//       {
+//         "name": "Babolat B",
+//         "weight": 90,
+//         "img": racket_images.babolat,
+//         "brand": racket_brands.babolat
+//       }
+//     ]
+// };

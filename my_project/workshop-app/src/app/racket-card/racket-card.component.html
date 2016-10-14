@@ -1,9 +1,9 @@
-<div class="card" >
+<div class="card hoverable" >
   <!--[ngClass]="racket.weight > 95 ? 'heavy' : 'light'" 
                   [style.outline]="racket.brand =='Head' ? '1px dashed black': ''">-->
   <div class="card-image">
     <img [src]="racket.img">
-    <span class="card-title red-text text-darken-3">{{racket.name}}</span>
+    <span class="card-title red-text text-darken-3"><a [routerLink]="['/racket', racket.name]">{{racket.name}}</a></span>
   </div>
   <div class="card-content">
     <p>Weight: {{racket.weight}}</p>
